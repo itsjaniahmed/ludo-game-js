@@ -70,7 +70,7 @@ function p2CreateGoti(x, y) {
 
 
 let arrP1 = [];
-
+//this is a array that will take every value of dice when ckicked.
 
 
 let ranNumP1;
