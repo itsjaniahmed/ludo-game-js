@@ -85,6 +85,7 @@ p4btn.disabled = true;
 
 //Player 1 Goti's
 p1btn.addEventListener('click', function() {
+    checkResetArray();
     ranNumP1 = Math.floor(Math.random() * 7);
     if (ranNumP1 == 0) {
         ranNumP1 = 6;
@@ -95,7 +96,7 @@ p1btn.addEventListener('click', function() {
 
     arrP1.push(ranNumP1);
 
-    console.log(arrP1[0]);
+    console.log(arrP1);
 
 
 
@@ -118,12 +119,17 @@ function p1movegoti(rand) {
 }
 
 
-
+function checkResetArray() {
+    if(arrP1[ arrP1.length -1 ] !== 6){
+        arrP1 = [];
+    }
+}
 
 
 
 
 p4btn.addEventListener('click', function() {
+    checkResetArray();
     ranNumP4 = Math.floor(Math.random() * 7);
     if (ranNumP4 == 0) {
         ranNumP4 = 6;
